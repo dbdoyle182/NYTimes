@@ -9,16 +9,17 @@ $("#searchBtn").on("click", function(event) {
     var endYear = $("#endYear").val();
 
     // Here we construct our URL
-    var apiKey =  "?api-key=5eca8e97a59c428ea2e628d8e052c3eb";
+    var apiKey =  "&api-key=5eca8e97a59c428ea2e628d8e052c3eb";
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+
-         search + apiKey; //+"?page="+ page+ "?begin_date=" +startYear+ "?end_date=" + endYear + apiKey;
+         search +"?page="+ page+ "?begin_date=" +startYear+ "?end_date=" + endYear + apiKey;
 
     $.ajax({
     url: queryURL,
     method: "GET"
     }).then(function(res) {
     console.log(res);
-    $("#articleResults").html(JSON.stringify(res));
+    var article = $("<li>").text(res.response.docs[0].snippet)
+    $("#articleResults").append(article);
     });
 
 });
