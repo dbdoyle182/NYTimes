@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NYTimes Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    button {
+        float: left;
+    };
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <h1 class="text-center p-5 bg-dark text-light border border-dark rounded">
+                    <img src="images" alt="Newspaper">New York Times Search
+                </h1>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="card border border-dark rounded">
+                    <div class="card-header bg-dark text-light">
+                      Search Parameters
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1">Search Term:</label>
+                              <input type="text" class="form-control" id="searchTerm" placeholder="Type your search term here">
+                            </div>
+                            <div class="form-group">
+                              <label for="recordLimit">Number of Records to Retrieve:</label>
+                              <select class="form-control" id="recordLimit">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>15</option>
+                                <option>20</option>
+                                <option>25</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Start Year (Optional):</label>
+                                <input type="text" class="form-control" id="startYear" placeholder="(i.e 2018)">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">End Year (Optional):</label>
+                                <input type="text" class="form-control" id="endYear" placeholder="(i.e 2018)">
+                            </div>
+                            <button type="button" class="btn btn-dark" id="searchBtn">Search</button>
+                            <button type="button" class="btn btn-dark ml-2" id="clearResults">Clear Results</button>
+                          </form>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="card border border-dark rounded">
+                    <div class="card-header bg-dark text-light">
+                      Top Articles
+                    </div>
+                    <div id="articleResults">
+                        PLACEHOLDER FOR ARTICLE RESULTS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
